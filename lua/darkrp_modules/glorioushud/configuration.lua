@@ -16,6 +16,9 @@ cfg.medkitsClasses = {
 	[ 'med_kit' ] = true,
 }
 
+MAGIC_START_AMOUNT = 100
+MAGIC_REGEN_RATE = 1 -- Magic points regenerated per second
+
 --Sound path when vote will start
 --You can find sounds here: https://wiki.facepunch.com/gmod/HL2_Sound_List
 --I recommend to test sounds from 'Buttons' tab

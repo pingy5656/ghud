@@ -693,6 +693,8 @@ function glorioushud.playerhud()
 	surface.SetMaterial( glorioushud.materials[ 'heart' ] )
 	surface.DrawTexturedRect( x + 8, y + 78, 24, 24 )
 
+
+	
 	draw.RoundedBox( 0, x + 5, y + 5, 65, 65, glorioushud.settings.playerhudclrs.shapesclr )
 
 	draw.RoundedBox( 0, x + 75, y + 5, 30, 30, glorioushud.settings.playerhudclrs.shapesclr )
