@@ -9,3 +9,12 @@ for i, v in pairs( files ) do
 	end
 
 end
+
+-- Adding the magic system files
+if SERVER then
+	AddCSLuaFile( 'darkrp_modules/glorioushud/cl_magichud.lua' )
+	AddCSLuaFile( 'darkrp_modules/glorioushud/cl_magicinfo.lua' )
+else
+	include( 'darkrp_modules/glorioushud/cl_magichud.lua' )
+	include( 'darkrp_modules/glorioushud/cl_magicinfo.lua' )
+end

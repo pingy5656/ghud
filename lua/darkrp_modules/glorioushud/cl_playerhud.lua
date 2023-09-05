@@ -683,6 +683,14 @@ function glorioushud.playerhud()
 	surface.SetMaterial( glorioushud.materials[ 'shield' ] )
 	surface.DrawTexturedRect( x + 8, y + 113, 24, 24 )
 
+	-- Draw Magic Bar
+	local magic = LocalPlayer():GetNWInt("Magic", 0)
+	local maxMagic = LocalPlayer():GetNWInt("MaxMagic", 100)
+	draw.RoundedBox(0, x, y + 35, width, height, Color(50, 50, 50, 200))
+	draw.RoundedBox(0, x, y + 35, width * (magic / maxMagic), height, Color(0, 0, 255, 255))
+	draw.SimpleText("Magic: " .. magic .. "/" .. maxMagic, "Default", x + width / 2, y + 35 + height / 2, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+
+
 	draw.RoundedBox( 0, x + 5, y + 75, 30, 30, glorioushud.settings.playerhudclrs.shapesclr )
 	draw.RoundedBox( 0, x + 40, y + 75, 355, 30, glorioushud.settings.playerhudclrs.shapesclr )
 	draw.RoundedBox( 5, x + 45, y + 80, 345, 20, glorioushud.settings.playerhudclrs.hpbgclr )
